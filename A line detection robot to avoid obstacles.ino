@@ -138,44 +138,25 @@ void Mode_DoLine()
   PWM_MAX_SPEED = 153;
   PWM_SPEED = 128;
   Serial.println(String(left_1) + "," + String(center) + "," + String(right_1));
-  //Line Kep
-  if ((digitalRead(Sensor[0]) == 1) && (digitalRead(Sensor[1]) == 0 ) && (digitalRead(Sensor[2]) == 1)) {
+  //   Line Don
+  if ((digitalRead(Sensor[0]) == 0) && (digitalRead(Sensor[1]) == 1 ) && (digitalRead(Sensor[2]) == 0)) {
     Forward();
   }
-  if ((digitalRead(Sensor[0]) == 0) && (digitalRead(Sensor[1]) == 0 ) && (digitalRead(Sensor[2]) == 1)) {
-    Left();
-  }
-  if ((digitalRead(Sensor[0]) == 0) && (digitalRead(Sensor[1]) == 1 ) && (digitalRead(Sensor[2]) == 1)) {
+  if ((digitalRead(Sensor[0]) == 1) && (digitalRead(Sensor[1]) == 1 ) && (digitalRead(Sensor[2]) == 0)) {
     Left();
   }
   if ((digitalRead(Sensor[0]) == 1) && (digitalRead(Sensor[1]) == 0 ) && (digitalRead(Sensor[2]) == 0)) {
+    Left();
+  }
+  if ((digitalRead(Sensor[0]) == 0) && (digitalRead(Sensor[1]) == 1 ) && (digitalRead(Sensor[2]) == 1)) {
     Right();
   }
-  if ((digitalRead(Sensor[0]) == 1) && (digitalRead(Sensor[1]) == 1 ) && (digitalRead(Sensor[2]) == 0)) {
+  if ((digitalRead(Sensor[0]) == 0) && (digitalRead(Sensor[1]) == 0 ) && (digitalRead(Sensor[2]) == 1)) {
     Right();
   }
-  if ((digitalRead(Sensor[0]) == 0) && (digitalRead(Sensor[1]) == 0 ) && (digitalRead(Sensor[2]) == 0)) {
-    Stop();
+  if ((digitalRead(Sensor[0]) == 1) && (digitalRead(Sensor[1]) == 1 ) && (digitalRead(Sensor[2]) == 1)) {
+    Back();
   }
-//  //   Line Don
-//  if ((digitalRead(Sensor[0]) == 0) && (digitalRead(Sensor[1]) == 1 ) && (digitalRead(Sensor[2]) == 0)) {
-//    Forward();
-//  }
-//  if ((digitalRead(Sensor[0]) == 1) && (digitalRead(Sensor[1]) == 1 ) && (digitalRead(Sensor[2]) == 0)) {
-//    Left();
-//  }
-//  if ((digitalRead(Sensor[0]) == 1) && (digitalRead(Sensor[1]) == 0 ) && (digitalRead(Sensor[2]) == 0)) {
-//    Left();
-//  }
-//  if ((digitalRead(Sensor[0]) == 0) && (digitalRead(Sensor[1]) == 1 ) && (digitalRead(Sensor[2]) == 1)) {
-//    Right();
-//  }
-//  if ((digitalRead(Sensor[0]) == 0) && (digitalRead(Sensor[1]) == 0 ) && (digitalRead(Sensor[2]) == 1)) {
-//    Right();
-//  }
-//  if ((digitalRead(Sensor[0]) == 1) && (digitalRead(Sensor[1]) == 1 ) && (digitalRead(Sensor[2]) == 1)) {
-//    Back();
-//  }
 }
 void KhoangCach()
 {
